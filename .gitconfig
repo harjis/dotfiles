@@ -1,0 +1,24 @@
+[core]
+	autocrlf = input
+	quotepath = false
+	excludesfile = ~/.gitignore
+	editor = subl -n -w
+	preloadindex = true
+[user]
+	name = Joonas Harjukallio
+	email = harjukallio@gmail.com
+[github]
+	user = harjis
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+[difftool]
+	prompt = false
+[push]
+	default = simple
+[mergetool]
+	keepBackup = false
+	prompt = false
