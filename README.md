@@ -1,5 +1,7 @@
 # Installing new machine
 
+## Install textmate and sublime first and check the installation paths and change them if not same that in .zshrc
+
 ## Homebrew
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
     brew doctor
@@ -26,7 +28,12 @@
 	mysql_install_db
 	
 ## After this set root password for mysql
-
 	mysql -uroot
 	SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
-	
+
+## Node.js bower and ember
+	brew install node
+	npm install -g ember-cli
+	npm install -g bower
+	brew install watchman
+	npm install -g phantomjs
