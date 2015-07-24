@@ -19,3 +19,14 @@
     gem update
     gem cleanup
     gem install bundler rails
+
+## MariaDB
+	brew install mariadb
+	unset TMPDIR
+	mysql_install_db
+	
+## After this set root password for mysql
+
+	mysql -uroot
+	SET PASSWORD FOR 'root'@'localhost' = PASSWORD('MyNewPass');
+	
