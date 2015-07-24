@@ -11,6 +11,20 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
+MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
+MATE_BIN="/usr/local/bin/mate"
+
+SUBL="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
+SUBL_BIN="/usr/local/bin/subl"
+
+if [[ -f "${SUBL}" && ! -f "${SUBL_BIN}" ]]; then
+  ln -s "${SUBL}" "${SUBL_BIN}"
+fi
+
+if [[ -f "${MATE}" && ! -f "${MATE_BIN}" ]]; then
+  ln -s "${MATE}" "${MATE_BIN}"
+fi
+
 # for oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="joonas-two"
