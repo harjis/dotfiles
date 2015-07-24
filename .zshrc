@@ -13,7 +13,7 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 # for oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="joni-two"
+ZSH_THEME="joonas-two"
 plugins=(heroku zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
