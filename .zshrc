@@ -2,6 +2,9 @@
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=4G -J-Xmx8G -J-XX:+TieredCompilation"
+export CLASSPATH=/Users/harjukallio/Sites/processor-edge/kernel/processor-standard/target/processor-standard-3.7.jar
 
 # for rbenv
 if [[ -d "${HOME}/.rbenv/bin" ]]; then

@@ -1,3 +1,6 @@
 .DS_Store
 vendor/bundle
-idea/*
+.idea
+*.iml
+kernel/out
+kernel/processor-standard/src/main/resources/META-INF/

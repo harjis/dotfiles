@@ -4,6 +4,7 @@
 	excludesfile = ~/.gitignore
 	editor = subl -n -w
 	preloadindex = true
+	commentchar = ";"
 [user]
 	name = Joonas Harjukallio
 	email = harjukallio@gmail.com
