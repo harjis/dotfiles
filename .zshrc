@@ -68,7 +68,7 @@ if [[ `uname` == 'Darwin' ]]; then
 
   # for rails
   alias migrate='echo "Development..." && bundle exec rake db:migrate RAILS_ENV=development && echo "Test..." && bundle exec rake db:migrate RAILS_ENV=test'
-  alias test_c = 'RAILS_ENV=test bin/rails console'
+  alias test_c='RAILS_ENV=test bin/rails console'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
