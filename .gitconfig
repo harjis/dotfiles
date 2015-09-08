@@ -23,3 +23,11 @@
 [mergetool]
 	keepBackup = false
 	prompt = false
+[alias]
+	s = status
+	b = branch
+	f = fetch
+	d = difftool
+	co = checkout
+	l = log --graph --abbrev-commit --date=relative
+	pb = remote prune origin
