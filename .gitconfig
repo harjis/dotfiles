@@ -31,3 +31,5 @@
 	co = checkout
 	l = log --graph --abbrev-commit --date=relative
 	pb = remote prune origin
+[merge]
+	tool = opendiff

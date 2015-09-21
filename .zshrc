@@ -67,9 +67,9 @@ if [[ `uname` == 'Darwin' ]]; then
   alias netlisteners='lsof -i -P | grep LISTEN'
 
   # for rails
-  alias migrate='echo "Development..." && bundle exec rake db:migrate RAILS_ENV=development && echo "Test..." && bundle exec rake db:migrate RAILS_ENV=test'
-  alias test_c='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
-  alias rtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
+  alias test_c='cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test script/rails console'
+  alias jtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
+  alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
   alias fastorm='cd ~/Sites/processor-edge/backend/ && rake fastorm:compile'
 
   # for redis
