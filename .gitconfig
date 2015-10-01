@@ -29,7 +29,7 @@
 	f = fetch
 	d = difftool
 	co = checkout
-	l = log --graph --abbrev-commit --date=relative
+	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pb = remote prune origin
 [merge]
 	tool = opendiff
