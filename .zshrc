@@ -72,6 +72,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
   alias rtest="JRUBY_OPTS='-J-XX:MaxDirectMemorySize=4G -J-Xmx8G -J-XX:+TieredCompilation -X+O' && cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console"
   alias fastorm='cd ~/Sites/processor-edge/backend/ && rake fastorm:compile'
+  alias jsek='cd ~/Sites/processor-edge/backend/ && rake jscs'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
