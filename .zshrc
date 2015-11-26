@@ -74,6 +74,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias fastorm='cd ~/Sites/processor-edge/backend/ && rake fastorm:compile'
   alias jsek='cd ~/Sites/processor-edge/backend/ && rake jscs'
   alias r='bin/rspec'
+  alias p='cd ~/Sites/processor-edge/backend/'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
