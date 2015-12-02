@@ -6,14 +6,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=4G -J-Xmx8G -J-XX:+TieredCompilation"
 export CLASSPATH=/Users/harjukallio/Sites/processor-edge/kernel/processor-core/target/classes:/Users/harjukallio/Sites/processor-edge/kernel/processor-standard/target/processor-standard-3.7.jar
 
-# for rbenv
-if [[ -d "${HOME}/.rbenv/bin" ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  alias rbenv-pull='cd ~/.rbenv && git pull && cd ~/.rbenv/plugins/ruby-build && git pull && cd ~/.rbenv/plugins/rbenv-gem-rehash && git pull && cd'
-fi
-
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
 MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 MATE_BIN="/usr/local/bin/mate"
 
@@ -45,7 +37,6 @@ if [[ `uname` == 'Darwin' ]]; then
   # for homebrew/pear
   export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/pear/bin:$PATH
   alias bu='brew update && brew upgrade --all && brew cleanup && brew doctor'
-  alias gu='for ruby in $(rbenv versions --bare); do rbenv shell ${ruby} && echo "Updating Ruby ${ruby}.." && gem update --system -N; gem update -N && gem cleanup; unset RBENV_VERSION; echo; done;'
 
   # for apache
   alias apache-start='sudo apachectl start'
@@ -71,8 +62,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias jtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
   alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
   alias rtest="JRUBY_OPTS='-J-XX:MaxDirectMemorySize=4G -J-Xmx8G -J-XX:+TieredCompilation -X+O' && cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console"
-  alias fastorm='cd ~/Sites/processor-edge/backend/ && rake fastorm:compile'
-  alias jsek='cd ~/Sites/processor-edge/backend/ && rake jscs'
+  alias fastorm='cd ~/Sites/processor-edge/backend/ && bundle exec rake fastorm:compile'
+  alias jsek='cd ~/Sites/processor-edge/backend/ && bundle exec rake jscs'
   alias r='bin/rspec'
   alias p='cd ~/Sites/processor-edge/backend/'
 
@@ -87,9 +78,6 @@ if [[ `uname` == 'Linux' ]]; then
   export EDITOR=nano
   alias mate='nano'
   alias subl='nano'
-
-  # for printers
-  alias p='clear;echo "Viimeset 10:";lpstat -W completed -o|tail -10;echo;echo "Jono nyt:";lpstat -o;echo;echo "Disabloidut printterit:";lpstat -p |grep dis;echo'
 fi
 
 # generate password
