@@ -67,6 +67,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias r='bin/rspec'
   alias p='cd ~/Sites/processor-edge/backend/'
   alias sasmine='cd ~/Sites/processor-edge/backend/ && bundle exec rake jasmine'
+  alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
