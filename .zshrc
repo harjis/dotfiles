@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
   # editor
-  export EDITOR=subl
+  export EDITOR=atom
 
   # for ssh-agent (ssh-add -K ~/.ssh/id_rsa)
   eval $(ssh-agent) > /dev/null
@@ -54,7 +54,7 @@ if [[ `uname` == 'Darwin' ]]; then
   # for misc
   alias l='ls -la'
   alias dropbox_conflicts='find ~/Dropbox -name \*conflicted\ copy\*'
-  alias nano='mate'
+  alias nano='atom'
   alias netlisteners='lsof -i -P | grep LISTEN'
 
   # for rails
