@@ -5,6 +5,7 @@ export LANG=en_US.UTF-8
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
 export CLASSPATH=/Users/harjukallio/Sites/processor-edge/kernel/processor-core/target/classes:/Users/harjukallio/Sites/processor-edge/kernel/processor-standard/target/processor-standard-3.7.jar
+export NODE_PATH="$NODE_PATH:/Users/harjukallio/Sites/processor-edge/rui"
 
 MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 MATE_BIN="/usr/local/bin/mate"
@@ -67,8 +68,9 @@ if [[ `uname` == 'Darwin' ]]; then
   alias r='bin/rspec'
   alias p='cd ~/Sites/processor-edge/backend/'
   alias sasmine='cd ~/Sites/processor-edge/backend/ && bundle exec rake jasmine'
-  alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
   alias rui='cd ~/Sites/processor-edge/rui/ && npm start'
+  alias ruitest='cd ~/Sites/processor-edge/rui/ && npm test'
+  alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
