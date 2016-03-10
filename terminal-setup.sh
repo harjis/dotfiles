@@ -49,13 +49,6 @@ if [ -d ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting ]; then
   git pull
 fi
 
-if [ -d ~/.rbenv/bin ]; then
-  echo "Update rbenv.."
-  cd ~/.rbenv && git pull
-  cd ~/.rbenv/plugins/ruby-build && git pull
-  cd ~/.rbenv/plugins/rbenv-gem-rehash && git pull
-fi
-
 echo "Getting .rc files.."
 
 cd ~
@@ -68,6 +61,8 @@ curl --silent -O https://raw.githubusercontent.com/harjis/dotfiles/master/.gemrc
 
 cd ~/.bundle
 curl --silent -O https://raw.githubusercontent.com/harjis/dotfiles/master/.bundle/config
+jobs=$(sysctl -n hw.ncpu)
+sed -i -e "s/_jobnumber_/$jobs/g" ~/.bundle/config
 
 echo "Done."
 echo
