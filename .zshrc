@@ -4,7 +4,7 @@ export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
-export CLASSPATH=/Users/harjukallio/Sites/processor-edge/kernel/processor-core/target/classes:/Users/harjukallio/Sites/processor-edge/kernel/processor-standard/target/processor-standard-3.7.jar
+export CLASSPATH="../kernel/processor-core/target/classes:../kernel/processor-standard/target/*"
 
 MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 MATE_BIN="/usr/local/bin/mate"
