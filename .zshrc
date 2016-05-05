@@ -63,10 +63,9 @@ if [[ `uname` == 'Darwin' ]]; then
   alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
   alias rtest="JRUBY_OPTS='-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation -X+O' && cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console"
   alias fastorm='cd ~/Sites/processor-edge/backend/ && bundle exec rake fastorm:compile'
-  alias jsek='cd ~/Sites/processor-edge/backend/ && bundle exec rake jscs'
   alias r='bin/rspec'
   alias p='cd ~/Sites/processor-edge/backend/'
-  alias sasmine='cd ~/Sites/processor-edge/backend/ && bundle exec rake jasmine'
+  alias pr='cd ~/Sites/processor-edge/rui/'
   alias rui='cd ~/Sites/processor-edge/rui/ && npm start'
   alias ruitest='cd ~/Sites/processor-edge/rui/ && npm test'
   alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
