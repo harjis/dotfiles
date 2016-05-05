@@ -70,6 +70,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias rui='cd ~/Sites/processor-edge/rui/ && npm start'
   alias ruitest='cd ~/Sites/processor-edge/rui/ && npm test'
   alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
+  alias lint='cd ~/Sites/processor-edge/rui/ && npm run lint'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
