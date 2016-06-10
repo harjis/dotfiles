@@ -65,11 +65,11 @@ if [[ `uname` == 'Darwin' ]]; then
   alias fastorm='cd ~/Sites/processor-edge/backend/ && bundle exec rake fastorm:compile'
   alias r='bin/rspec'
   alias p='cd ~/Sites/processor-edge/backend/'
-  alias pr='cd ~/Sites/processor-edge/rui/'
-  alias rui='cd ~/Sites/processor-edge/rui/ && npm start'
-  alias ruitest='cd ~/Sites/processor-edge/rui/ && npm test'
+  alias pr='cd ~/Sites/processor-edge/frontend/'
+  alias rui='cd ~/Sites/processor-edge/frontend/ && npm start'
+  alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
   alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
-  alias lint='cd ~/Sites/processor-edge/rui/ && npm run lint'
+  alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
 
   # for redis
   alias redis-start='redis-server /usr/local/etc/redis.conf'
