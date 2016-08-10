@@ -94,8 +94,7 @@ alias e=$EDITOR
 
 # git
 alias g='git'
-alias git-cleanup-bundle='find ~ -path "*/.git" -not -path "*/vendor/bundle/*" -type d -exec sh -c "cd {} && cd .. && git config --get remote.origin.url &> /dev/null && pwd && git fetch origin && git remote prune origin && git gc && if [ -f Gemfile ]; then bundle --quiet && bundle clean; fi && cd && echo" \;'
-alias git-cleanup='find ~ -path "*/.git" -not -path "*/vendor/bundle/*" -type d -exec sh -c "cd {} && cd .. && git config --get remote.origin.url &> /dev/null && pwd && git fetch origin && git remote prune origin && git gc && cd && echo" \;'
+alias gr='git rebase -i'
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
