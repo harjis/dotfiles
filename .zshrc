@@ -130,3 +130,22 @@ function extract {
     fi
 fi
 }
+
+# Begin definitions for helper for relex
+function relex {
+    local current_path="$(pwd)"
+
+    while [ ! -x "$current_path/tasks.py" -a "$current_path" != "/" ]; do
+        current_path="$(dirname "$current_path")"
+    done
+    if [ -x "$current_path/tasks.py" ]
+        then
+        ( exec -a relex "$current_path/tasks.py" "${@:1}" )
+        return $?
+    else
+        echo "Not run within Relex repository or the repository is too old to contain tasks.py"
+        return 1
+    fi
+}
+# Someday, add command autocomplete definitions here
+# End definitions for helper for relex
