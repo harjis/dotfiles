@@ -94,7 +94,15 @@ alias e=$EDITOR
 
 # git
 alias g='git'
-alias gr='git rebase -i'
+
+function gr {
+  if [ -z "$1" ]; then
+     # display usage if no parameters given
+     echo "Usage: gr 2"
+  else
+    git rebase -i HEAD~"$1"
+  fi
+}
 
 # added by travis gem
 [ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
