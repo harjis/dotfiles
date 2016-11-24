@@ -47,17 +47,13 @@ if [[ `uname` == 'Darwin' ]]; then
   alias mysql-start='mysql.server start'
   alias mysql-stop='mysql.server stop'
 
-  # for postgres
-  alias pg-start='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-  alias pg-stop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
   # for misc
   alias l='ls -la'
   alias dropbox_conflicts='find ~/Dropbox -name \*conflicted\ copy\*'
   alias nano='atom'
   alias netlisteners='lsof -i -P | grep LISTEN'
+  alias lc='cd ~/Sites/processor-edge/ && echo https://github.com/manko/processor-edge/commit/$(git log -1 --pretty=%h) | pbcopy'
 
-  # for rails
   alias test_c='cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test script/rails console'
   alias jtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
   alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
@@ -70,10 +66,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
   alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
-
-  # for redis
-  alias redis-start='redis-server /usr/local/etc/redis.conf'
-  alias redis-stop='kill $(cat /usr/local/var/run/redis.pid)'
+  alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
 fi
 
 # Linux
@@ -103,9 +96,6 @@ function gr {
     git rebase -i HEAD~"$1"
   fi
 }
-
-# added by travis gem
-[ -f ~/.travis/travis.sh ] && source ~/.travis/travis.sh
 
 function extract {
  if [ -z "$1" ]; then
