@@ -32,6 +32,7 @@
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 '.platform-darwin':
   'cmd-shift-o': 'fuzzy-finder:toggle-file-finder'
+  'ctrl-v': 'git-plus:menu'
 'atom-workspace atom-text-editor:not([mini])':
   'cmd-shift-c': 'editor:toggle-line-comments'
 '.platform-darwin atom-workspace':
