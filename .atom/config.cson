@@ -1,0 +1,37 @@
+"*":
+  core:
+    audioBeep: false
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+    ]
+    telemetryConsent: "no"
+  editor:
+    fontSize: 12
+  "exception-reporting":
+    userId: "a9432537-3633-4627-ddab-14c64e10f097"
+  nuclide:
+    installRecommendedPackages: true
+    "nuclide-code-format":
+      formatOnSave: true
+    "nuclide-flow":
+      pathToFlow: "/Users/harjukallio/Sites/processor-edge/frontend/node_modules/flow-bin/flow-osx-v0.33.0/flow"
+  react:
+    enabledForAllJavascriptFiles: true
+  welcome:
+    showOnStartup: false
+".coffee.jsx.source":
+  editor:
+    autoIndentOnPaste: true
