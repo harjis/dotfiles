@@ -2,7 +2,7 @@
 	autocrlf = input
 	quotepath = false
 	excludesfile = ~/.gitignore
-	editor = atom --wait
+	editor = mate -w
 	preloadindex = true
 	commentchar = ";"
 [user]
