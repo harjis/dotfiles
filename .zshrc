@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
   # editor
-  export EDITOR=mate
+  export EDITOR='mate -w'
 
   # for ssh-agent (ssh-add -K ~/.ssh/id_rsa)
   eval $(ssh-agent) > /dev/null
