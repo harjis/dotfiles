@@ -29,7 +29,7 @@ source $ZSH/oh-my-zsh.sh
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
   # editor
-  export EDITOR=atom
+  export EDITOR=mate
 
   # for ssh-agent (ssh-add -K ~/.ssh/id_rsa)
   eval $(ssh-agent) > /dev/null
@@ -50,7 +50,7 @@ if [[ `uname` == 'Darwin' ]]; then
   # for misc
   alias l='ls -la'
   alias dropbox_conflicts='find ~/Dropbox -name \*conflicted\ copy\*'
-  alias nano='atom'
+  alias nano='mate'
   alias netlisteners='lsof -i -P | grep LISTEN'
   alias lc='cd ~/Sites/processor-edge/ && echo https://github.com/manko/processor-edge/commit/$(git log -1 --pretty=%h) | pbcopy'
 

@@ -23,6 +23,7 @@
   "exception-reporting":
     userId: "a9432537-3633-4627-ddab-14c64e10f097"
   nuclide:
+    hyperclick: {}
     installRecommendedPackages: true
     "nuclide-code-format":
       formatOnSave: true
