@@ -31,5 +31,6 @@
 	co = checkout
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	pb = remote prune origin
+	ms = merge --squash
 [merge]
 	tool = opendiff
