@@ -25,12 +25,9 @@
 	prompt = false
 [alias]
 	s = status
-	b = branch
-	f = fetch
-	d = difftool
-	co = checkout
+	fa = fetch --all
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	pb = remote prune origin
 	ms = merge --squash
+	rh = reset --hard
 [merge]
 	tool = opendiff
