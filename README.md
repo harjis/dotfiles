@@ -21,3 +21,7 @@
     gem update
     gem cleanup
     gem install bundler rails
+    
+## Java
+    brew tap caskroom/versions && brew cask install java8
+    brew install maven
