@@ -2,19 +2,11 @@
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
 export CLASSPATH="../kernel/processor-core/target/classes:../kernel/processor-standard/target/*"
 
 MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 MATE_BIN="/usr/local/bin/mate"
-
-SUBL="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
-SUBL_BIN="/usr/local/bin/subl"
-
-if [[ -f "${SUBL}" && ! -f "${SUBL_BIN}" ]]; then
-  ln -s "${SUBL}" "${SUBL_BIN}"
-fi
 
 if [[ -f "${MATE}" && ! -f "${MATE_BIN}" ]]; then
   ln -s "${MATE}" "${MATE_BIN}"
@@ -34,8 +26,7 @@ if [[ `uname` == 'Darwin' ]]; then
   # for ssh-agent (ssh-add -K ~/.ssh/id_rsa)
   eval $(ssh-agent) > /dev/null
 
-  # for homebrew/pear
-  export PATH=/usr/local/bin:/usr/local/sbin:/usr/local/pear/bin:$PATH
+  # for homebrew
   alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
 
   # for apache
@@ -73,12 +64,7 @@ if [[ `uname` == 'Linux' ]]; then
   # editor
   export EDITOR=nano
   alias mate='nano'
-  alias subl='nano'
 fi
-
-# generate password
-alias gp='openssl rand -base64 21'
-alias secret='ruby -e "require \"securerandom\"; puts SecureRandom.hex(64)"'
 
 # misc
 alias pgrep='pgrep -lf'
