@@ -1,3 +1,4 @@
+eval "$(rbenv init -)"
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
