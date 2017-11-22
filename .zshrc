@@ -5,6 +5,7 @@ export HISTCONTROL=ignoredups
 export LANG=en_US.UTF-8
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
 export CLASSPATH="../kernel/processor-core/target/classes:../kernel/processor-standard/target/*"
+export PATH=./bin:$PATH
 
 MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
 MATE_BIN="/usr/local/bin/mate"
