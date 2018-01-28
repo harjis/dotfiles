@@ -24,6 +24,7 @@
 	keepBackup = false
 	prompt = false
 [alias]
+	c = checkout
 	s = status
 	fa = fetch --all
 	l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
