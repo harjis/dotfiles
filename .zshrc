@@ -116,6 +116,15 @@ function extract {
 fi
 }
 
+function pack {
+ if [ -z "$1" ]; then
+    # display usage if no parameters given
+    echo "Usage: pack <path>"
+ else
+   tar cvzf ./"$1.tar.gz" $1
+fi
+}
+
 # Begin definitions for helper for relex
 function relex {
     local current_path="$(pwd)"
