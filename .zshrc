@@ -59,6 +59,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias mig='cd ~/Sites/processor-edge/backend/ && bundle exec rake db:migrate'
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
   alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
+  alias npm-check='npm-check -c -s -u'
 fi
 
 # Linux
