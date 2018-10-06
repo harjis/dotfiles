@@ -63,6 +63,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
   alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
   alias npm-check='npm-check -c -s -u'
+  alias npm-global='npm list -g --depth 0'
 fi
 
 # Linux
