@@ -62,6 +62,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
   alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
+  alias hflow='cd ~/Sites/heimdall/frontend/ && npm run flow'
   alias npm-check='npm-check -c -s -u'
   alias npm-global='npm list -g --depth 0'
 fi
