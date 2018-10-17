@@ -57,7 +57,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias fastorm='cd ~/Sites/processor-edge/backend/ && bundle exec rake fastorm:compile'
   alias p='cd ~/Sites/processor-edge/backend/'
   alias pr='cd ~/Sites/processor-edge/frontend/'
-  alias h='cd ~/Sites/heimdall/backend/'
+  alias h='cd ~/Sites/heimdall/'
   alias hr='cd ~/Sites/heimdall/frontend/'
   alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
