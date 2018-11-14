@@ -59,6 +59,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias pr='cd ~/Sites/processor-edge/frontend/'
   alias h='cd ~/Sites/heimdall/'
   alias hr='cd ~/Sites/heimdall/frontend/'
+  alias hstart='cd ~/Sites/heimdall/ && ./gradlew bootRun'
   alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
   alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
   alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
