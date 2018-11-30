@@ -19,9 +19,10 @@ fi
 
 # for oh-my-zsh
 ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="joonas-two"
-plugins=(heroku zsh-syntax-highlighting)
+plugins=(zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
+autoload -U promptinit; promptinit
+prompt pure
 
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
