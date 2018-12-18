@@ -31,5 +31,9 @@
     {
         "key": "shift+cmd+1",
         "command": "workbench.files.action.showActiveFileInExplorer"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "editor.action.formatDocument"
     }
 ]
