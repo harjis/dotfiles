@@ -50,6 +50,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias nano='mate'
   alias netlisteners='lsof -i -P | grep LISTEN'
   alias lc='cd ~/Sites/processor-edge/ && echo https://gitlab.relexsolutions.com/DevHEL/planning-cloud/commit/$(git log -1 --pretty=%h) | pbcopy'
+  alias hc='cd ~/Sites/heimdall/ && echo https://gitlab.relexsolutions.com/cat/heimdall/heimdall/commit/$(git log -1 --pretty=%h) | pbcopy'
 
   alias test_c='cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test script/rails console'
   alias jtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
