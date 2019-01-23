@@ -6,6 +6,8 @@ export LANG=en_US.UTF-8
 export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
 export CLASSPATH="../kernel/processor-core/target/classes:../kernel/processor-standard/target/*"
 export PATH=./bin:$PATH
+export ANDROID_HOME="/Users/harjukallio/AndroidSDK/tools/"
+export ANDROID_SDK_ROOT=$ANDROID_HOME
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

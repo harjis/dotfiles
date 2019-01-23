@@ -1,10 +1,16 @@
 {
+    "flow.enabled": true,
     "flow.pathToFlow": "${workspaceRoot}/node_modules/.bin/flow",
     "flow.showUncovered": true,
+    "flow.useNPMPackagedFlow": true,
     "typescript.format.enable": false,
     "typescript.validate.enable": false,
     "javascript.validate.enable": false,
+    "javascript.format.enable": false,
+    "prettier.eslintIntegration": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.alwaysShowStatus": true,
     "workbench.editor.enablePreview": false,
-    "window.openFilesInNewWindow": "on",
+    "git.autofetch": true,
     "workbench.colorTheme": "Darcula"
 }
