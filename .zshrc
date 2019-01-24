@@ -70,6 +70,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias hflow='cd ~/Sites/heimdall/frontend/ && npm run flow'
   alias npm-check='npm-check -c -s -u'
   alias npm-global='npm list -g --depth 0'
+  alias yarn-check='yarn-check -s -u'
 fi
 
 # Linux
