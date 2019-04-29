@@ -1,4 +1,6 @@
 eval "$(rbenv init -)"
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
