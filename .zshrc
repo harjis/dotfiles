@@ -47,6 +47,9 @@ if [[ `uname` == 'Darwin' ]]; then
   # for mysql/maria
   alias mysql-start='mysql.server start'
   alias mysql-stop='mysql.server stop'
+  
+  alias psql-start='brew services start postgresql'
+  alias psql-stop='brew services stop postgresql'
 
   # for misc
   alias l='ls -la'
