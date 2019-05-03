@@ -51,6 +51,9 @@ if [[ `uname` == 'Darwin' ]]; then
   alias psql-start='brew services start postgresql'
   alias psql-stop='brew services stop postgresql'
 
+  alias mongo-start='brew services start mongodb'
+  alias mongo-stop='brew services stop mongodb'
+  
   # for misc
   alias l='ls -la'
   alias dropbox_conflicts='find ~/Dropbox -name \*conflicted\ copy\*'
