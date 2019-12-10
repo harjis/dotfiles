@@ -1,16 +1,31 @@
 # Installing new machine
 
-## Install textmate first and check the installation paths and change them if not same that in .zshrc
-
 ## Homebrew
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/homebrew/go/install)"
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     brew doctor
-    brew install zsh zsh-completions git wget rbenv node
+    brew cask install iterm2
 
-## Z shell
-    chsh -s /bin/zsh
-    rm -f ~/.bash*
+## Oh My Zsh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+## Git: https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+    brew install git
+    ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+    eval "$(ssh-agent -s)"
+    
+
+## asdf: https://asdf-vm.com/#/core-manage-asdf-vm
+    brew install asdf
+    echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
+    echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
+    brew install coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc unzip curl gpg
+
+## asdf: nodejs
+    asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
+    bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+## yarn
+    brew install yarn
+    
 ## Terminal Settings
     curl --silent -L https://raw.githubusercontent.com/harjis/dotfiles/master/terminal-setup.sh | bash
 
