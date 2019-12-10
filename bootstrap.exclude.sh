@@ -3,7 +3,7 @@ link () {
 	echo "Shall we continue? (y/n)"
 	read resp
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
+		for file in $( ls -A | grep -vE '\.exclude*|\.git$|.*.md|vscode' ) ; do
 			ln -sv "$PWD/$file" "$HOME"
 		done
 		echo "Symlinking complete"
