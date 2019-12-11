@@ -14,6 +14,9 @@
     eval "$(ssh-agent -s)"
 
 ## [Iterm dracula](https://draculatheme.com/iterm/)
+
+## [pure](https://github.com/sindresorhus/pure)
+
 ## [asdf](https://asdf-vm.com/#/core-manage-asdf-vm): 
     brew install asdf
     echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
