@@ -26,20 +26,15 @@
 ## asdf: nodejs
     asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
     bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
 ## yarn
     brew install yarn
-    
-## Terminal Settings
-    curl --silent -L https://raw.githubusercontent.com/harjis/dotfiles/master/terminal-setup.sh | bash
 
-## Rbenv + gems
-    rbenv install -l
-    rbenv global X.X.X
-    gem update --system
-    gem update
-    gem cleanup
-    gem install bundler rails
-    
+## asdf: ruby
+    asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+## [docker](https://hub.docker.com/)
+
 ## Java
     brew tap caskroom/versions && brew cask install java8
     brew install maven
