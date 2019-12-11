@@ -41,27 +41,25 @@ if [[ `uname` == 'Darwin' ]]; then
   alias mongo-start='brew services start mongodb'
   alias mongo-stop='brew services stop mongodb'
   
+  local pc_path="/Users/harjukallio/Sites/relex/planning-cloud"
+  local pc_back_path="$pc_path/backend"
+  local pc_front_path="$pc_path/frontend"
+  local h_path="/Users/harjukallio/Sites/relex/heimdall"
+  local h_front_path="$h_path/frontend"
+  
   # for misc
   alias l='ls -la'
   alias nano='mate'
   alias netlisteners='lsof -i -P | grep LISTEN'
-  alias lc='cd ~/Sites/processor-edge/ && echo https://gitlab.relexsolutions.com/DevHEL/planning-cloud/commit/$(git log -1 --pretty=%h) | pbcopy'
-  alias hc='cd ~/Sites/heimdall/ && echo https://gitlab.relexsolutions.com/cat/heimdall/heimdall/commit/$(git log -1 --pretty=%h) | pbcopy'
+  alias lc='cd $pc_path && echo https://gitlab.relexsolutions.com/DevHEL/planning-cloud/commit/$(git log -1 --pretty=%h) | pbcopy'
+  alias hc='cd $h_path && echo https://gitlab.relexsolutions.com/cat/heimdall/heimdall/commit/$(git log -1 --pretty=%h) | pbcopy'
 
-  alias test_c='cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test script/rails console'
-  alias jtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test script/rails console'
-  alias rjtest='cd ~/Sites/processor-edge/backend/ && JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5006 RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console'
-  alias rtest="JRUBY_OPTS='-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation -X+O' && cd ~/Sites/processor-edge/backend/ && RAILS_ENV=test rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 --disable-int-handler --evaluation-timeout 10 --rubymine-protocol-extensions -- script/rails console"
-  alias fastorm='cd ~/Sites/processor-edge/backend/ && bundle exec rake fastorm:compile'
-  alias p='cd ~/Sites/processor-edge/backend/'
-  alias pr='cd ~/Sites/processor-edge/frontend/'
-  alias h='cd ~/Sites/heimdall/'
-  alias hr='cd ~/Sites/heimdall/frontend/'
-  alias hstart='cd ~/Sites/heimdall/ && ./gradlew bootRun'
-  alias ruitest='cd ~/Sites/processor-edge/frontend/ && npm test'
-  alias lint='cd ~/Sites/processor-edge/frontend/ && npm run lint'
-  alias flow='cd ~/Sites/processor-edge/frontend/ && npm run flow'
-  alias hflow='cd ~/Sites/heimdall/frontend/ && npm run flow'
+  alias p='cd $pc_back_path'
+  alias pr='cd $pc_front_path'
+  alias h='cd $h_path'
+  alias hr='cd $h_front_path'
+  alias hstart='cd $h_path && ./gradlew bootRun'
+  alias hflow='cd $h_front_path && npm run flow'
   alias npm-check='npm-check -c -s -u'
   alias npm-global='npm list -g --depth 0'
   alias yarn-check='yarn-check -s -u'
@@ -77,9 +75,6 @@ fi
 # misc
 alias pgrep='pgrep -lf'
 alias e=$EDITOR
-
-# git
-alias g='git'
 
 function gr {
   if [ -z "$1" ]; then
