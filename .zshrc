@@ -1,9 +1,11 @@
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
+ZSH_THEME="robbyrussell"
 
 # for oh-my-zsh
 plugins=(git)
+export ZSH="/Users/harjukallio/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
 # asdf
