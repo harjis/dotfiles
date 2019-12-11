@@ -1,32 +1,14 @@
-eval "$(rbenv init -)"
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
-export LANG=en_US.UTF-8
-export JRUBY_OPTS="-J-XX:MaxDirectMemorySize=2G -J-Xmx4G -J-XX:+TieredCompilation"
-export CLASSPATH="../kernel/processor-core/target/classes:../kernel/processor-standard/target/*"
-export PATH=./bin:$PATH
-export ANDROID_HOME="/Users/harjukallio/AndroidSDK/tools/"
-export ANDROID_SDK_ROOT=$ANDROID_HOME
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
-MATE="/Applications/TextMate.app/Contents/SharedSupport/Support/bin/mate"
-MATE_BIN="/usr/local/bin/mate"
-
-if [[ -f "${MATE}" && ! -f "${MATE_BIN}" ]]; then
-  ln -s "${MATE}" "${MATE_BIN}"
-fi
 
 # for oh-my-zsh
-ZSH=$HOME/.oh-my-zsh
-plugins=(zsh-syntax-highlighting)
+plugins=(git)
 source $ZSH/oh-my-zsh.sh
-autoload -U promptinit; promptinit
-prompt pure
+
+# asdf
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
@@ -56,7 +38,6 @@ if [[ `uname` == 'Darwin' ]]; then
   
   # for misc
   alias l='ls -la'
-  alias dropbox_conflicts='find ~/Dropbox -name \*conflicted\ copy\*'
   alias nano='mate'
   alias netlisteners='lsof -i -P | grep LISTEN'
   alias lc='cd ~/Sites/processor-edge/ && echo https://gitlab.relexsolutions.com/DevHEL/planning-cloud/commit/$(git log -1 --pretty=%h) | pbcopy'
