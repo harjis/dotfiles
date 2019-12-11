@@ -8,13 +8,13 @@
 ## Oh My Zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-## Git: https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+## [Git](https://help.github.com/en/enterprise/2.17/user/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent): 
     brew install git
     ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
     eval "$(ssh-agent -s)"
-    
 
-## asdf: https://asdf-vm.com/#/core-manage-asdf-vm
+## [Iterm dracula](https://draculatheme.com/iterm/)
+## [asdf](https://asdf-vm.com/#/core-manage-asdf-vm): 
     brew install asdf
     echo -e "\n. $(brew --prefix asdf)/asdf.sh" >> ~/.zshrc
     echo -e "\n. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash" >> ~/.zshrc
