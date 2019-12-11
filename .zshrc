@@ -7,6 +7,8 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 export ZSH="/Users/harjukallio/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
+autoload -U promptinit; promptinit
+prompt pure
 
 # asdf
 . /usr/local/opt/asdf/asdf.sh
