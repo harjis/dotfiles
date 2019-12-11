@@ -6,3 +6,4 @@ kernel/out
 kernel/processor-standard/src/main/resources/META-INF/
 .rakeTasks
 .bundle/
+.tool-versions
