@@ -33,8 +33,12 @@
 ## asdf: ruby
     asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 
-## [docker](https://hub.docker.com/)
+## asdf: java
+    brew install jq
+    asdf plugin-add java
+    asdf install java adopt-openjdk-8u232-b09
+    asdf install java adopt-openjdk-11.0.2+9
+    asdf global java adopt-openjdk-11.0.2+9
+    
 
-## Java
-    brew tap caskroom/versions && brew cask install java8
-    brew install maven
+## [docker](https://hub.docker.com/)
