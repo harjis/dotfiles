@@ -34,7 +34,18 @@
 ## asdf: ruby
     asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 
-## asdf: java
+## jenv
+    brew install jenv
+    jenv enable-plugin export
+    exec $SHELL -l
+    
+    Remember to put things in .zshrc
+    
+    brew tap homebrew/cask-versions
+    brew cask install homebrew/cask-versions/adoptopenjdk8
+    brew cask install homebrew/cask-versions/java11
+    
+## asdf: java NOT WORKING
     brew install jq
     asdf plugin-add java
     asdf install java adopt-openjdk-8u232-b09
