@@ -1,10 +1,13 @@
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
+
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
 ZSH_THEME="robbyrussell"
 
 # for oh-my-zsh
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 export ZSH="/Users/harjukallio/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
@@ -13,7 +16,6 @@ prompt pure
 # asdf
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
-. ~/.asdf/plugins/java/set-java-home.sh
 
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
