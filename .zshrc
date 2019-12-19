@@ -78,7 +78,7 @@ fi
 alias pgrep='pgrep -lf'
 alias e=$EDITOR
 
-function gr {
+function grr {
   if [ -z "$1" ]; then
      # display usage if no parameters given
      echo "Usage: gr 2"
