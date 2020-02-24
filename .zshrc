@@ -13,9 +13,6 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
-# asdf
-. /usr/local/opt/asdf/asdf.sh
-. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
 
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
@@ -146,3 +143,10 @@ function relex {
 }
 # Someday, add command autocomplete definitions here
 # End definitions for helper for relex
+
+# direnv needs to be quite bottom too
+eval "$(direnv hook zsh)"
+
+# asdf: These need to be at the bottom of rc-file
+. /usr/local/opt/asdf/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
