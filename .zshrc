@@ -34,7 +34,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias mysql-start='mysql.server start'
   alias mysql-stop='mysql.server stop'
   
-  alias psql-start='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres'
+  alias psql-start='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres'
   alias psql='docker exec -it pg-docker psql -U postgres'
 
   alias mongo-start='brew services start mongodb'
