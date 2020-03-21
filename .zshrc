@@ -1,4 +1,4 @@
-export PATH="$HOME/.jenv/bin:$PATH"
+export PATH="$HOME/.jenv/bin:/Users/harjukallio/cloud_sql_proxy:$PATH"
 eval "$(jenv init -)"
 
 # for zsh
@@ -24,18 +24,9 @@ if [[ `uname` == 'Darwin' ]]; then
 
   # for homebrew
   alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
-
-  # for apache
-  alias apache-start='sudo apachectl start'
-  alias apache-stop='sudo apachectl stop'
-  alias apache-restart='sudo apachectl restart'
-
-  # for mysql/maria
-  alias mysql-start='mysql.server start'
-  alias mysql-stop='mysql.server stop'
   
   alias psql-start='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres'
-  alias psql='docker exec -it pg-docker psql -U postgres'
+  alias psql-client='docker exec -it pg-docker psql -U postgres'
 
   alias mongo-start='brew services start mongodb'
   alias mongo-stop='brew services stop mongodb'
@@ -150,3 +141,9 @@ eval "$(direnv hook zsh)"
 # asdf: These need to be at the bottom of rc-file
 . /usr/local/opt/asdf/asdf.sh
 . /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/harjukallio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/harjukallio/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/harjukallio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/harjukallio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
