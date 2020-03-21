@@ -1,4 +1,4 @@
-export PATH="$HOME/.jenv/bin:/Users/harjukallio/cloud_sql_proxy:$PATH"
+-export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
 # for zsh
