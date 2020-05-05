@@ -26,6 +26,7 @@ if [[ `uname` == 'Darwin' ]]; then
   alias bu='brew update && brew upgrade && brew cleanup && brew doctor'
   
   alias psql-start='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres'
+  alias psql-stop='docker stop pg-docker'
   alias psql-client='docker exec -it pg-docker psql -U postgres'
 
   alias mongo-start='brew services start mongodb'
