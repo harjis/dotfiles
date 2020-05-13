@@ -32,6 +32,8 @@ if [[ `uname` == 'Darwin' ]]; then
   alias mongo-start='brew services start mongodb'
   alias mongo-stop='brew services stop mongodb'
   
+  alias minikube-start='minikube start --cpus 4 --memory 10000 --disk-size 40000mb'
+  
   local pc_path="/Users/harjukallio/Sites/relex/planning-cloud"
   local pc_back_path="$pc_path/backend"
   local pc_front_path="$pc_path/frontend"
