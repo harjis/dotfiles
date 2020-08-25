@@ -32,3 +32,5 @@
 	rh = reset --hard
 [merge]
 	tool = opendiff
+[pull]
+	rebase = true

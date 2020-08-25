@@ -49,10 +49,12 @@ if [[ `uname` == 'Darwin' ]]; then
 
   alias p='cd $pc_back_path'
   alias pr='cd $pc_front_path'
+  alias pflow='cd $pc_front_path && npm run flow'
   alias h='cd $h_path'
   alias hr='cd $h_front_path'
   alias hstart='cd $h_path && ./gradlew bootRun'
   alias hflow='cd $h_front_path && npm run flow'
+  
   alias npm-check='npm-check -c -s -u'
   alias npm-global='npm list -g --depth 0'
   alias yarn-check='yarn-check -s -u'
