@@ -5,3 +5,4 @@ vendor/bundle
 .rakeTasks
 .bundle/
 .tool-versions
+.java-version
