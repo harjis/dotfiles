@@ -154,3 +154,6 @@ if [ -f '/Users/harjukallio/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/harjukallio/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/harjukallio/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# added by travis gem
+[ ! -s /Users/harjukallio/.travis/travis.sh ] || source /Users/harjukallio/.travis/travis.sh
