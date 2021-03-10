@@ -1,6 +1,9 @@
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
+# Add .NET Core SDK tools
+export PATH="$PATH:/Users/harjukallio/.dotnet/tools"
+
 # for zsh
 export HISTFILESIZE=10000
 export HISTCONTROL=ignoredups
@@ -13,6 +16,8 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
+# This is temporary solution for UMS
+export GITLAB_NPM_TOKEN=NZMYHvpC3bU1mvw8Yays
 
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
@@ -28,6 +33,13 @@ if [[ `uname` == 'Darwin' ]]; then
   alias psql-start='docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres'
   alias psql-stop='docker stop pg-docker'
   alias psql-client='docker exec -it pg-docker psql -U postgres'
+  
+  alias mssql-start='docker run --rm --name ms-docker -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=verystrongPassword123" \
+   -p 1433:1433 -h ms-docker \
+   -v sqlvolume:/var/opt/mssql \
+   -d mcr.microsoft.com/mssql/server:2019-latest'
+  alias mssql-stop='docker stop ms-docker'
+  alias mssql-client='docker exec -it ms-docker /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "verystrongPassword123"'
 
   alias mongo-start='brew services start mongodb'
   alias mongo-stop='brew services stop mongodb'
