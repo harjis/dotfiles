@@ -16,9 +16,6 @@ source $ZSH/oh-my-zsh.sh
 autoload -U promptinit; promptinit
 prompt pure
 
-# This is temporary solution for UMS
-export GITLAB_NPM_TOKEN=NZMYHvpC3bU1mvw8Yays
-
 # Mac
 if [[ `uname` == 'Darwin' ]]; then
   # editor
